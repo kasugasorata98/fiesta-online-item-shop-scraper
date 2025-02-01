@@ -38,29 +38,29 @@ The main logic is in the index.ts file. It uses axios to fetch the item shop pag
 ### Example of an embed object sent to Discord:
 ```
 {
-"title": "Item Name",
-"color": 0x0099ff,
-"thumbnail": {
-"url": "Item Image URL"
-},
-"url": "Item Link",
-"fields": [
-{
-"name": "Slime Coin",
-"value": "Item Price",
-"inline": true
-},
-{
-"name": "Discount",
-"value": "Item Discount",
-"inline": true
-},
-{
-"name": "Time Remaining",
-"value": "<t:UnixTimestamp:R>",
-"inline": true
-}
-]
+   "title": "Item Name",
+   "color": 0x0099ff,
+   "thumbnail": {
+      "url": "Item Image URL"
+   },
+   "url": "Item Link",
+   "fields": [
+      {
+         "name": "Slime Coin",
+         "value": "Item Price",
+         "inline": true
+      },
+      {
+         "name": "Discount",
+         "value": "Item Discount",
+         "inline": true
+      },
+      {
+         "name": "Time Remaining",
+         "value": "<t:UnixTimestamp:R>",
+         "inline": true
+      }
+   ]
 }
 ```
 ## License
