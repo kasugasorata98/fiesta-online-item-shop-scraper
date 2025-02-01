@@ -2,18 +2,6 @@
 
 This project scrapes the Fiesta Online item shop and publishes the data to a Discord channel using webhooks.
 
-## Project Structure
-
-.gitattributes
-.github/
-workflows/
-.github/workflows/publish-eu.yml
-.github/workflows/publish-na.yml
-.gitignore
-index.ts
-package.json
-tsconfig.json
-
 ## Setup
 
 1. Clone the repository:
