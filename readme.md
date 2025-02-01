@@ -63,6 +63,3 @@ The main logic is in the index.ts file. It uses axios to fetch the item shop pag
    ]
 }
 ```
-## License
-
-This project is licensed under the ISC License.
