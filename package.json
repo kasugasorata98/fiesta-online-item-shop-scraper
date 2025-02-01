@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "publish:na": "ENV=NA npx tsc index",
-    "publish:eu": "ENV=EU npx tsc index",
+    "publish:na": "ENV=NA tsc index",
+    "publish:eu": "ENV=EU tsc index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
