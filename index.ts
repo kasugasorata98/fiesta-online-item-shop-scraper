@@ -2,9 +2,9 @@ import axios, { isAxiosError } from "axios";
 import * as cheerio from "cheerio";
 import moment from "moment";
 
-const scrapeWebsite = async (url: string) => {
+const scrapeWebsite = async (websiteUrl: string, discordWebhookUrl: string) => {
   try {
-    const { data } = await axios.get(url);
+    const { data } = await axios.get(websiteUrl);
 
     const $ = cheerio.load(data);
 
@@ -66,12 +66,9 @@ const scrapeWebsite = async (url: string) => {
         };
       });
 
-      await axios.post(
-        "https://discord.com/api/webhooks/1335362289653780500/RY_j9hUhM1u2fouVomhAu2bnkqzjyie22FgKB83AFTdDCv7SYzgjGvw0cj5PUrZ78lB3",
-        {
-          embeds,
-        }
-      );
+      await axios.post(discordWebhookUrl, {
+        embeds,
+      });
     }
   } catch (error) {
     if (isAxiosError(error)) {
@@ -83,7 +80,13 @@ const scrapeWebsite = async (url: string) => {
 };
 
 if (process.env.ENV === "NA") {
-  scrapeWebsite("https://en.gamigo.com/fiesta/en/itemshop");
+  scrapeWebsite(
+    "https://en.gamigo.com/fiesta/en/itemshop",
+    "https://discord.com/api/webhooks/1335362289653780500/RY_j9hUhM1u2fouVomhAu2bnkqzjyie22FgKB83AFTdDCv7SYzgjGvw0cj5PUrZ78lB3"
+  );
 } else if (process.env.ENV === "EU") {
-  scrapeWebsite("https://de.gamigo.com/fiestaonline/de/itemshop");
+  scrapeWebsite(
+    "https://de.gamigo.com/fiestaonline/de/itemshop",
+    "https://discord.com/api/webhooks/1335380480585105448/PcCEmiKdP7AV4FASm_HIGs7yMCcS6NXnYGpQRiB70jaOlAY1PmZKkVFz0ojVQwATF4NC"
+  );
 }
