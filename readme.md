@@ -5,8 +5,8 @@ This project scrapes the Fiesta Online item shop and publishes the data to a Dis
 ## Setup
 
 1. Clone the repository:
-   git clone <repository-url>
-   cd fiesta-online-item-shop
+   ```git clone <repository-url>```
+   ```cd fiesta-online-item-shop```
 
 2. Install the dependencies:
    ```npm install```
@@ -21,8 +21,8 @@ The project uses environment variables to determine which item shop to scrape an
 - `publish:eu`: Scrapes the European item shop and publishes the data to the configured Discord webhook.
 
 Run the scripts using:
-npm run publish:na
-npm run publish:eu
+```npm run publish:na```
+```npm run publish:eu```
 
 ## GitHub Actions
 
@@ -36,7 +36,7 @@ The project includes two GitHub Actions workflows:
 The main logic is in the index.ts file. It uses axios to fetch the item shop page, cheerio to parse the HTML, and moment to handle time calculations. The scraped data is then sent to a Discord webhook in chunks of 10 items.
 
 ### Example of an embed object sent to Discord:
-
+```
 {
 "title": "Item Name",
 "color": 0x0099ff,
@@ -62,7 +62,7 @@ The main logic is in the index.ts file. It uses axios to fetch the item shop pag
 }
 ]
 }
-
+```
 ## License
 
 This project is licensed under the ISC License.
