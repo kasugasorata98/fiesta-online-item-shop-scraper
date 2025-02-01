@@ -9,7 +9,7 @@ This project scrapes the Fiesta Online item shop and publishes the data to a Dis
    cd fiesta-online-item-shop
 
 2. Install the dependencies:
-   npm install
+   ```npm install```
 
 ## Configuration
 
