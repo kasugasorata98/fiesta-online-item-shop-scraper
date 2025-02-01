@@ -21,5 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Typescript
+        run: npm install -g typescript
+
       - name: Publish to ACE Discord
         run: npm run publish:na
