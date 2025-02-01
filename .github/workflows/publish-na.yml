@@ -1,10 +1,9 @@
-name: Publish to ACE Discord
+name: Publish to ACE Discord US
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *" # Runs every 5 minutes
-    # - cron: "0 17 * * *" # Runs at 5:00 PM UTC every day
+    - cron: "5 17 * * *" # Runs at 5:05 PM UTC every day
 
 jobs:
   build:
@@ -23,4 +22,4 @@ jobs:
         run: npm install
 
       - name: Publish to ACE Discord
-        run: npx ts-node index
+        run: npm run publish:na

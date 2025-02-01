@@ -82,4 +82,8 @@ const scrapeWebsite = async (url: string) => {
   }
 };
 
-scrapeWebsite("https://en.gamigo.com/fiesta/en/itemshop");
+if (process.env.ENV === "NA") {
+  scrapeWebsite("https://en.gamigo.com/fiesta/en/itemshop");
+} else if (process.env.ENV === "EU") {
+  scrapeWebsite("https://de.gamigo.com/fiestaonline/de/itemshop");
+}
