@@ -82,11 +82,11 @@ const scrapeWebsite = async (websiteUrl: string, discordWebhookUrl: string) => {
 if (process.env.ENV === "NA") {
   scrapeWebsite(
     "https://en.gamigo.com/fiesta/en/itemshop",
-    "https://discord.com/api/webhooks/1335362289653780500/RY_j9hUhM1u2fouVomhAu2bnkqzjyie22FgKB83AFTdDCv7SYzgjGvw0cj5PUrZ78lB3"
+    "https://discordapp.com/api/webhooks/1355878850302836836/U3VuT1qVW1JHSgob0aEph0O0Os-8oeIQcbgkChxATD5PAuVyb1oQHoXuYA9_7a3QTegJ"
   );
 } else if (process.env.ENV === "EU") {
   scrapeWebsite(
     "https://de.gamigo.com/fiestaonline/de/itemshop",
-    "https://discord.com/api/webhooks/1335380480585105448/PcCEmiKdP7AV4FASm_HIGs7yMCcS6NXnYGpQRiB70jaOlAY1PmZKkVFz0ojVQwATF4NC"
+    "https://discordapp.com/api/webhooks/1355878916908126371/vPd81vVbk6CfxG54QhTNanbnj1LZ3c9ggOmveSdui_vsf6yBDBTuOjcWOuhQteQ-sEl6"
   );
 }
